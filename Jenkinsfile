@@ -62,7 +62,7 @@ pipeline {
             steps {
                 script {
                     sh "aws eks update-kubeconfig --name {CLUSTER_NAME} --region {AWS_REGION}"
-                    sh "kubectl apply -f git-deployment.yaml"
+                    sh "kubectl apply -f deployment.yaml"
                 }
             }
         }
